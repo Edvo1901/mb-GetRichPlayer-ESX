@@ -4,6 +4,13 @@ This is an ESX version of my [mb-GetRichPlayer](https://github.com/Edvo1901/mb-G
 # Contributor
 > Big thanks to `Jorn#0008` who helped me dealing with the SQL stuff. This script cannot be done without you!
 
+# Support
+> Join our discord for support: [DISCORD](https://discord.gg/MkXfmb2M2V)
+
+# Version
+1. [QBCore version](https://github.com/Edvo1901/mb-GetRichPlayer-QBCore)
+2. [ESX version](https://github.com/Edvo1901/mb-GetRichPlayer-ESX)
+
 # Preview
 
 [Short version](https://media.discordapp.net/attachments/1026901903503798342/1045514652987174962/image.png)
@@ -34,9 +41,6 @@ Depend on version you want (short, standard or full version). You need to change
 
 If you dont want to include the black money in the total money then set this to false.
 ```Config.BlackMoney = false```
-
-# Support
-> Join our discord for support: [DISCORD](https://discord.gg/MkXfmb2M2V)
 
 # A few word
 This is the script that I make for my server need, so it might not fit your. You can adapt it as you want or if you any improvement, just open a PR or send me a text on discord.
