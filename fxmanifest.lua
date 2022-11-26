@@ -9,8 +9,6 @@ server_scripts {
 
 shared_script {
 	'@es_extended/imports.lua',
-	'@es_extended/locale.lua',
-	'locales/*.lua',
     'config.lua',
 }
 
