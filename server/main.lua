@@ -27,13 +27,13 @@ Citizen.CreateThread(function()
 end)
 
 --Admin command to trigger the event without waititng for the timer or simply you disable the auto log feature
-ESX.RegisterCommand(TranslateCap('command_name'), 'admin', function()
+ESX.RegisterCommand(_U('command_name'), 'admin', function()
     if (Config.OnlyTopRichest.enable) then
         TriggerEvent("mb-GetRichPlayer:server:getTopPlayerMoney", Config.LogMessageType)
     else
         TriggerEvent("mb-GetRichPlayer:server:getAllPlayerMoney", Config.LogMessageType)
     end
-end, true, {help = TranslateCap('command_help')})
+end, true, {help = _U('command_help')})
 
 --Event for TOP RICHEST ONLY
 RegisterNetEvent("mb-GetRichPlayer:server:getTopPlayerMoney", function(type)
@@ -48,7 +48,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getTopPlayerMoney", function(type)
         end
 
         for _, v in pairs(topRichestPlayers) do
-            resultWithLicense = resultWithLicense .. "`" .. _ .. "." .. TranslateCap('message_with_license', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["identifier"], topRichestPlayers[_]["accounts"], topRichestPlayers[_]["total_money"])
+            resultWithLicense = resultWithLicense .. "`" .. _ .. "." .. _U('message_with_license', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["identifier"], topRichestPlayers[_]["accounts"], topRichestPlayers[_]["total_money"])
         end
 
         sendToDiscord(resultWithLicense) --Send log to discord
@@ -63,7 +63,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getTopPlayerMoney", function(type)
         end
 
         for _, v in pairs(topRichestPlayers) do
-            resultWithoutLicense = resultWithoutLicense .. "`" .. _ .. "." .. TranslateCap('message_without_license', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["accounts"], topRichestPlayers[_]["total_money"])
+            resultWithoutLicense = resultWithoutLicense .. "`" .. _ .. "." .. _U('message_without_license', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["accounts"], topRichestPlayers[_]["total_money"])
         end
 
         sendToDiscord(resultWithoutLicense) --Send log to discord
@@ -78,7 +78,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getTopPlayerMoney", function(type)
         end
 
         for _, v in pairs(topRichestPlayers) do
-            shortMsg = shortMsg .. "`" .. _ .. "." .. TranslateCap('message_short', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["total_money"])
+            shortMsg = shortMsg .. "`" .. _ .. "." .. _U('message_short', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["total_money"])
         end
 
         sendToDiscord(shortMsg) --Send log to discord
@@ -98,7 +98,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getAllPlayerMoney", function(type)
         end
 
         for _, v in pairs(topRichestPlayers) do
-            resultWithLicense = resultWithLicense .. "`" .. _ .. "." .. TranslateCap('message_with_license', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["identifier"], topRichestPlayers[_]["accounts"], topRichestPlayers[_]["total_money"])
+            resultWithLicense = resultWithLicense .. "`" .. _ .. "." .. _U('message_with_license', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["identifier"], topRichestPlayers[_]["accounts"], topRichestPlayers[_]["total_money"])
         end
 
         sendToDiscord(resultWithLicense) --Send log to discord
@@ -113,7 +113,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getAllPlayerMoney", function(type)
         end
 
         for _, v in pairs(topRichestPlayers) do
-            resultWithoutLicense = resultWithoutLicense .. "`" .. _ .. "." .. TranslateCap('message_without_license', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["accounts"], topRichestPlayers[_]["total_money"])
+            resultWithoutLicense = resultWithoutLicense .. "`" .. _ .. "." .. _U('message_without_license', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["accounts"], topRichestPlayers[_]["total_money"])
         end
 
         sendToDiscord(resultWithoutLicense) --Send log to discord
@@ -128,7 +128,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getAllPlayerMoney", function(type)
         end
 
         for _, v in pairs(topRichestPlayers) do
-            shortMsg = shortMsg .. "`" .. _ .. "." .. TranslateCap('message_short', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["total_money"])
+            shortMsg = shortMsg .. "`" .. _ .. "." .. _U('message_short', topRichestPlayers[_]["full_name"], topRichestPlayers[_]["total_money"])
         end
 
         sendToDiscord(shortMsg) --Send log to discord
