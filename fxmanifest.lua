@@ -15,10 +15,3 @@ shared_script {
 }
 
 lua54 'yes'
-
-escrow_ignore {
-	'config.lua',
-    'server/*.lua',
-	'locales/*.lua',
-}
-dependency '/assetpacks'
